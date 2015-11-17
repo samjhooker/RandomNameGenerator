@@ -12,7 +12,7 @@ var StudentModule = (function () {
                 url: "http://api.uinames.com/?amount=25",
                 success: function (data) {
                     console.log(data);
-                    callback(data);
+                    callback(data); //runs whatever function was defined as callback. this is awesome.
                 }
 
             });
