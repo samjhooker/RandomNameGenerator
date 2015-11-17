@@ -4,14 +4,15 @@
 var StudentModule = (function () {
     
     return{
-        getStudents: function (){
+        getStudents: function (callback){
             //get studetns code here
-            $.ajax({
+            $.ajax({ 
                 type: "GET",
-                data: "jsonp",
+                dataType: "jsonp",
                 url: "http://api.uinames.com/?amount=25",
-                success: function(data){
+                success: function (data) {
                     console.log(data);
+                    callback(data);
                 }
 
             });
